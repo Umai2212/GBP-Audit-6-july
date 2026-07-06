@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite IIT — GBP &amp; Local SEO Action Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2/dist/tabler-icons.min.css">
+<style>
+:root{
+  --bg:#150E2B;
+  --bg-2:#1D1543;
+  --surface:#221A4D;
+  --surface-2:#2A2158;
+  --border:#3D2E6B;
+  --purple:#7B5FC4;
+  --purple-2:#9A82D9;
+  --pink:#F0729E;
+  --pink-2:#F5A3C7;
+  --text:#EDE9F7;
+  --text-dim:#A79CD1;
+  --text-onlight:#1E1438;
+  --green:#3FBE7A;
+  --green-bg:#132A20;
+  --red:#F0837C;
+  --red-bg:#331621;
+  --blue:#6FC3E8;
+  --blue-bg:#142A3D;
+  --amber:#E8B34E;
+  --radius:18px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  color:var(--pink-2);
+}
+.mono{font-family:'JetBrains Mono',monospace;}
+a{color:inherit;}
+
+/* ---------- Background texture ---------- */
+.texture{
+  position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    radial-gradient(ellipse 1000px 700px at 15% -10%, #7B5FC42a, transparent 60%),
+    radial-gradient(ellipse 800px 600px at 100% 20%, #F0729E1a, transparent 60%),
+    radial-gradient(ellipse 900px 700px at 50% 110%, #7B5FC420, transparent 60%);
+}
+
+/* ---------- Top nav ---------- */
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  background:rgba(21,14,43,0.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center;
+  gap:4px;
+  padding:14px 24px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  display:flex; align-items:center; gap:8px;
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-size:15px;
+  color:var(--pink-2);
+  padding-right:20px;
+  white-space:nowrap;
+  border-right:1px solid var(--border);
+  margin-right:12px;
+}
+.nav-link{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12.5px;
+  font-weight:500;
+  color:var(--text-dim);
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:20px;
+  white-space:nowrap;
+  transition:all .2s ease;
+  cursor:pointer;
+  border:1px solid transparent;
+  font-family:'Inter',sans-serif;
+}
+.nav-link i{font-size:14px;}
+.nav-link:hover{color:var(--text); background:var(--surface-2);}
+.nav-link.active{color:var(--bg); background:var(--pink-2); font-weight:600;}
+
+/* ---------- Slide container ---------- */
+.deck{
+  width:100%;
+}
+.slide{
+  min-height:100vh;
+  width:100%;
+  display:flex; flex-direction:column;
+  justify-content:center;
+  padding:100px 24px 70px 24px;
+  position:relative;
+  border-bottom:1px solid var(--border);
+}
+.slide-inner{max-width:980px; margin:0 auto; width:100%; position:relative; z-index:1;}
+.slide.center-content{justify-content:center; text-align:left;}
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--purple-2);
+  margin-bottom:18px;
+  font-family:'Inter',sans-serif;
+}
+.eyebrow::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--pink); box-shadow:0 0 10px var(--pink);}
+h2.title{font-size:40px; margin-bottom:16px; line-height:1.15;}
+p.lede{font-size:17px; color:var(--text-dim); max-width:680px; margin-bottom:36px;}
+p.lede b{color:var(--text); font-weight:600;}
+
+/* ---------- Title slide ---------- */
+.title-slide h1{font-size:52px; line-height:1.18; margin-bottom:18px;}
+.title-slide .subtitle{font-size:19px; color:var(--text-dim); margin-bottom:30px; max-width:600px;}
+.title-tags{display:flex; gap:12px; flex-wrap:wrap;}
+.title-tag{
+  border:1px solid var(--border); border-radius:8px; padding:9px 16px; font-size:13px; color:var(--text-dim);
+  font-family:'JetBrains Mono',monospace;
+}
+.title-tag.strong{background:var(--surface-2); border-color:var(--purple); color:var(--text);}
+
+/* ---------- Cards ---------- */
+.card-purple{
+  background:var(--purple); color:var(--text-onlight); border-radius:var(--radius); padding:26px 28px;
+}
+.card-purple h3{color:var(--text-onlight); font-size:19px; margin-bottom:14px; display:flex; align-items:center; gap:10px;}
+.card-purple ul{list-style:none;}
+.card-purple ul li{padding:7px 0; padding-left:20px; position:relative; font-size:14.5px; font-weight:500;}
+.card-purple ul li::before{content:''; position:absolute; left:0; top:14px; width:6px; height:6px; border-radius:50%; background:var(--text-onlight); opacity:.55;}
+
+.card-outline{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:26px 28px;
+}
+.card-outline h3{color:var(--pink-2); font-size:19px; margin-bottom:14px; display:flex; align-items:center; gap:10px;}
+.card-outline ul{list-style:none;}
+.card-outline ul li{padding:7px 0; padding-left:20px; position:relative; font-size:14.5px; color:var(--text-dim);}
+.card-outline ul li::before{content:''; position:absolute; left:0; top:14px; width:6px; height:6px; border-radius:50%; background:var(--red);}
+
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+@media(max-width:800px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+
+.callout{
+  display:flex; gap:14px; align-items:flex-start; border-radius:14px; padding:18px 20px; font-size:14.5px; margin-top:16px;
+}
+.callout.red{background:var(--red-bg); border:1px solid #6B2A38; color:#F5C2BD;}
+.callout.green{background:var(--green-bg); border:1px solid #2A5C42; color:#BFEAD1;}
+.callout.blue{background:var(--blue-bg); border:1px solid #2A4E66; color:#BEE4F5;}
+.callout i{font-size:19px; margin-top:1px; flex-shrink:0;}
+.callout.red i{color:var(--red);}
+.callout.green i{color:var(--green);}
+.callout.blue i{color:var(--blue);}
+.callout b{color:#fff;}
+
+/* ---------- Category tables ---------- */
+.cat-block{margin-bottom:32px;}
+.cat-head{display:flex; align-items:center; gap:12px; margin-bottom:4px;}
+.cat-icon{
+  width:32px; height:32px; border-radius:9px; background:var(--surface-2); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center; color:var(--pink-2); font-size:15px; flex-shrink:0;
+}
+.cat-block h3{font-size:17px; color:var(--text); font-family:'Inter',sans-serif; font-weight:700;}
+.cat-block .cat-sub{font-size:12.5px; color:var(--text-dim); margin:2px 0 14px 44px;}
+.rank-table{width:100%; border-collapse:collapse;}
+.rank-table th{
+  text-align:left; font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.04em;
+  color:var(--text-dim); padding:7px 10px; border-bottom:1px solid var(--border);
+}
+.rank-table td{padding:10px; border-bottom:1px solid var(--border); font-size:13px; vertical-align:middle;}
+.rank-table tr:last-child td{border-bottom:none;}
+.rank-table td.kw{color:var(--text); font-weight:500;}
+.rank-table th.branch-col, .rank-table td.branch-col{text-align:center; width:100px;}
+
+.rankpill{display:inline-flex; align-items:center; gap:7px; justify-content:center;}
+.rankbar{position:relative; width:48px; height:5px; border-radius:3px;
+  background:linear-gradient(90deg, var(--green) 0%, var(--amber) 45%, var(--red) 100%);
+  opacity:0.32;
+}
+.rankdot{position:absolute; top:50%; width:8px; height:8px; border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 2px var(--bg);}
+.rankval{font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; min-width:20px; text-align:left;}
+.rankval.good{color:var(--green);}
+.rankval.mid{color:var(--amber);}
+.rankval.bad{color:var(--red);}
+.rankval.na{color:var(--text-dim); font-style:italic;}
+.nabar{width:48px; height:5px; border-radius:3px; border:1px dashed var(--border); opacity:.6;}
+
+/* ---------- Stat numbers ---------- */
+.stat-trio{display:flex; gap:30px; margin:30px 0; flex-wrap:wrap;}
+.stat-block{flex:1; min-width:180px;}
+.stat-block .big{font-family:'Playfair Display',serif; font-size:44px; font-weight:800; color:var(--text); line-height:1;}
+.stat-block .lbl{font-size:13.5px; font-weight:700; color:var(--pink-2); margin:8px 0 4px 0;}
+.stat-block .desc{font-size:13px; color:var(--text-dim);}
+
+/* ---------- Numbered step badges ---------- */
+.step-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px 30px; margin-top:20px;}
+@media(max-width:800px){.step-grid{grid-template-columns:1fr;}}
+.step{position:relative; padding-left:0;}
+.step-badge{
+  width:38px; height:38px; border-radius:11px; background:var(--purple); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:700; font-size:16px;
+  margin-bottom:12px;
+}
+.step h4{font-size:16px; color:var(--text); font-family:'Inter',sans-serif; font-weight:700; margin-bottom:6px;}
+.step p{font-size:13.5px; color:var(--text-dim);}
+.step-line{height:1px; background:linear-gradient(90deg, var(--border), transparent); margin-bottom:14px;}
+
+/* ---------- Branch pages ---------- */
+.branch-header{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:10px;}
+.branch-badge{
+  width:48px; height:48px; border-radius:13px; background:var(--surface-2); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center; color:var(--pink-2); font-size:21px; flex-shrink:0;
+}
+.rank-order-badge{
+  font-family:'JetBrains Mono',monospace; font-size:11.5px; padding:5px 13px; border-radius:20px;
+  border:1px solid var(--border); color:var(--text-dim); margin-left:auto;
+}
+.track-badge{
+  display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.04em;
+  padding:6px 14px; border-radius:20px; margin:6px 0 18px 0; font-family:'Inter',sans-serif;
+}
+.track-badge.underperform{background:var(--red-bg); color:var(--red); border:1px solid #6B2A38;}
+.track-badge.perform{background:var(--green-bg); color:var(--green); border:1px solid #2A5C42;}
+
+.donut-row{display:flex; align-items:center; gap:30px; flex-wrap:wrap; margin:20px 0;}
+.donut-legend{display:flex; flex-direction:column; gap:10px; font-size:13px;}
+.legend-item{display:flex; align-items:center; gap:9px;}
+.legend-dot{width:10px; height:10px; border-radius:50%; flex-shrink:0;}
+.legend-item b{color:var(--text);}
+.legend-item span{color:var(--text-dim);}
+
+.action-list{list-style:none; margin:14px 0;}
+.action-list li{display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); font-size:13.5px;}
+.action-list li:last-child{border-bottom:none;}
+.action-icon{
+  width:26px; height:26px; border-radius:7px; background:var(--surface-2); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center; color:var(--pink-2); font-size:12.5px; flex-shrink:0; margin-top:1px;
+}
+.action-list li b{color:var(--text); display:block; margin-bottom:2px; font-size:13.5px;}
+.action-list li span{color:var(--text-dim); font-size:12.5px;}
+
+.subhead{display:flex; align-items:center; gap:8px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--pink-2); margin:24px 0 8px 0; font-family:'Inter',sans-serif;}
+.subhead i{font-size:14px;}
+
+.idea-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+@media(max-width:800px){.idea-grid{grid-template-columns:1fr;}}
+.idea-card{background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:16px 18px;}
+.idea-card h5{display:flex; align-items:center; gap:8px; font-size:12px; color:var(--pink-2); text-transform:uppercase; letter-spacing:.05em; margin-bottom:10px; font-family:'Inter',sans-serif; font-weight:700;}
+.idea-card ul{padding-left:0; list-style:none; font-size:12.5px; color:var(--text-dim);}
+.idea-card ul li{margin-bottom:7px; padding-left:16px; position:relative;}
+.idea-card ul li::before{content:''; position:absolute; left:0; top:6px; width:5px; height:5px; border-radius:50%; background:var(--pink);}
+
+.freq-box{
+  display:flex; align-items:center; gap:14px; background:var(--surface-2); border:1px solid var(--border);
+  border-radius:12px; padding:14px 18px; margin-top:12px;
+}
+.freq-box .freq-tag{font-family:'JetBrains Mono',monospace; font-size:12.5px; background:var(--pink-2); color:var(--text-onlight); padding:5px 12px; border-radius:7px; font-weight:600;}
+.freq-box p{margin:0; font-size:12.5px; color:var(--text-dim);}
+
+/* ---------- Roadmap / road illustration ---------- */
+.road-wrap{margin:30px 0;}
+.roadmap-week-cards{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:30px;}
+@media(max-width:800px){.roadmap-week-cards{grid-template-columns:1fr;}}
+.week-card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px;}
+.week-card .wk-badge{
+  width:34px; height:34px; border-radius:10px; background:var(--purple); color:#fff; display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display',serif; font-weight:700; font-size:15px; margin-bottom:12px;
+}
+.week-card h4{font-size:14.5px; color:var(--text); font-family:'Inter',sans-serif; font-weight:700; margin-bottom:8px;}
+.week-card p{font-size:12.5px; color:var(--text-dim);}
+
+.metrics-list{list-style:none; margin-top:10px;}
+.metrics-list li{padding:12px 0; border-bottom:1px solid var(--border); font-size:13.5px; color:var(--text-dim); display:flex; gap:10px; align-items:flex-start;}
+.metrics-list li i{color:var(--pink); font-size:15px; margin-top:2px; flex-shrink:0;}
+.metrics-list li:last-child{border-bottom:none;}
+
+.mini-table{width:100%; border-collapse:collapse; margin-top:10px;}
+.mini-table th{font-size:10.5px; text-transform:uppercase; color:var(--text-dim); text-align:left; padding:6px 8px; border-bottom:1px solid var(--border);}
+.mini-table td{padding:9px 8px; font-size:12.5px; border-bottom:1px solid var(--border); color:var(--text-dim);}
+.mini-table tr:last-child td{border-bottom:none;}
+.mini-table td.hl{color:var(--pink-2); font-weight:600;}
+.mini-table td:first-child{color:var(--text); font-weight:500;}
+
+.callbars{display:flex; align-items:flex-end; gap:8px; height:80px; margin-top:12px;}
+.callbar-col{flex:1; display:flex; flex-direction:column; align-items:center; gap:5px;}
+.callbar{width:100%; border-radius:4px 4px 0 0; background:var(--purple-2); opacity:.85; min-height:4px; transition:height .8s ease;}
+.callbar-lbl{font-size:9.5px; color:var(--text-dim);}
+.callbar-val{font-size:10px; font-family:'JetBrains Mono',monospace; color:var(--text);}
+
+/* ---------- Footer nav controls ---------- */
+.deck-controls{
+  position:fixed; bottom:24px; right:24px; z-index:200; display:flex; gap:10px; align-items:center;
+}
+.ctrl-btn{
+  width:44px; height:44px; border-radius:50%; background:var(--surface); border:1px solid var(--border);
+  color:var(--text); display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:18px;
+  transition:all .2s ease;
+}
+.ctrl-btn:hover{background:var(--purple); border-color:var(--purple);}
+.slide-counter{
+  position:fixed; bottom:24px; left:24px; z-index:200;
+  font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--text-dim);
+  background:var(--surface); border:1px solid var(--border); padding:10px 16px; border-radius:20px;
+}
+.slide-counter b{color:var(--pink-2);}
+
+@media(max-width:700px){
+  .title-slide h1{font-size:34px;}
+  h2.title{font-size:28px;}
+  .slide{padding:90px 20px 70px 20px;}
+  .rank-table{display:block; overflow-x:auto; white-space:nowrap;}
+  .stat-trio{gap:20px;}
+  .stat-block .big{font-size:34px;}
+}
+</style>
+</head>
+<body>
+<div class="texture"></div>
+
+<nav id="mainNav">
+  <span class="nav-brand"><i class="ti ti-school"></i>ELITE IIT</span>
+  <a class="nav-link" data-slide="0"><i class="ti ti-home"></i>Title</a>
+  <a class="nav-link" data-slide="1"><i class="ti ti-layout-grid"></i>Overview</a>
+  <a class="nav-link" data-slide="2"><i class="ti ti-bulb"></i>Insights</a>
+  <a class="nav-link" data-slide="3"><i class="ti ti-map-pin"></i>Jayanagar</a>
+  <a class="nav-link" data-slide="4"><i class="ti ti-map-pin"></i>Yelahanka</a>
+  <a class="nav-link" data-slide="5"><i class="ti ti-map-pin"></i>Koramangala</a>
+  <a class="nav-link" data-slide="6"><i class="ti ti-map-pin"></i>Malleshwaram</a>
+  <a class="nav-link" data-slide="7"><i class="ti ti-calendar-time"></i>Roadmap</a>
+  <a class="nav-link" data-slide="8"><i class="ti ti-flag-check"></i>Metrics</a>
+</nav>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 0: TITLE -->
+  <section class="slide title-slide center-content" id="slide-0">
+    <div class="slide-inner">
+      <div class="eyebrow">30-day action plan · prepared 7 july 2026</div>
+      <h1>Google Business Profile &amp; Local SEO<br>Action Plan</h1>
+      <p class="subtitle">A full ranking audit across Koramangala, Yelahanka, Jayanagar and Malleshwaram — with a branch-by-branch plan to fix what's broken and protect what's working.</p>
+      <div class="title-tags">
+        <div class="title-tag strong"><i class="ti ti-calendar" style="margin-right:6px;"></i>May–June 2026</div>
+        <div class="title-tag">4 branches</div>
+        <div class="title-tag">60+ keywords tracked</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 1: OVERVIEW -->
+  <section class="slide" id="slide-1">
+    <div class="slide-inner">
+      <div class="eyebrow">Section 01</div>
+      <h2 class="title">Rankings — all branches, by category</h2>
+      <p class="lede">Every tracked keyword, grouped the way Elite IIT's course offerings are actually structured. K / Y / J / M = Koramangala / Yelahanka / Jayanagar / Malleshwaram.</p>
+      <div id="overviewTables"></div>
+      <div class="callout red">
+        <i class="ti ti-alert-triangle"></i>
+        <div><b>Confirm before investing effort:</b> CLAT and CMA show zero ranking across all 4 branches. Either these aren't real course offerings, or they've never been added as a service on any listing.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: INSIGHTS -->
+  <section class="slide" id="slide-2">
+    <div class="slide-inner">
+      <div class="eyebrow">Section 02</div>
+      <h2 class="title">Three things the data actually shows</h2>
+      <p class="lede">Not assumptions — patterns pulled directly from the ranking scan, review data, and call logs.</p>
+
+      <div class="card-outline" style="margin-bottom:20px;">
+        <h3><i class="ti ti-star"></i>Insight 1 — Rating doesn't predict rank</h3>
+        <p style="color:var(--text-dim); font-size:14px; margin-bottom:10px;">Malleshwaram has the lowest star rating of all 4 branches but the best average ranking, because it collects new reviews at a steady daily pace. Frequency beats score.</p>
+        <table class="mini-table">
+          <tr><th>Branch</th><th>Rating</th><th>Review pattern</th><th>Avg. rank</th></tr>
+          <tr><td>Koramangala</td><td>4.2★ (highest)</td><td>Low / irregular</td><td>6.1</td></tr>
+          <tr><td>Yelahanka</td><td>4.0★</td><td>Low / irregular</td><td>6.4</td></tr>
+          <tr><td>Malleshwaram</td><td>3.9★ (lowest)</td><td class="hl">~2 reviews/day</td><td class="hl">3.5 (best)</td></tr>
+          <tr><td>Jayanagar</td><td>3.8★ (lowest)</td><td>Low / irregular</td><td>13.3 (worst)</td></tr>
+        </table>
+      </div>
+
+      <div class="card-outline" style="margin-bottom:20px;">
+        <h3><i class="ti ti-phone-outgoing"></i>Insight 2 — Posting frequency drives calls</h3>
+        <p style="color:var(--text-dim); font-size:14px; margin-bottom:10px;">March is a universal seasonal peak (admission season). But Yelahanka shows the clearest posting effect: grew while being posted to, dropped once posting stopped — matching direct same-day-results observation.</p>
+        <div id="callChart"></div>
+        <div class="callout blue">
+          <i class="ti ti-info-circle"></i>
+          <div>Malleshwaram was suspended ~8 days in June — its 291 calls that month still outperformed Koramangala and Jayanagar's full-month totals.</div>
+        </div>
+      </div>
+
+      <div class="card-outline">
+        <h3><i class="ti ti-shield-exclamation"></i>Insight 3 — Bulk-publishing is a suspension risk</h3>
+        <p style="color:var(--text-dim); font-size:14px;">Early May: first post published to Yelahanka only. Later May: access extended to all 4 profiles. Second round: a bulk post published across all 4 locations simultaneously. June: Malleshwaram suspended ~8 days, then reinstated.</p>
+        <div class="callout red">
+          <i class="ti ti-alert-triangle"></i>
+          <div>Causation isn't proven, but the timing matches a known risk pattern. <b>Recommendation:</b> post to each branch individually going forward.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCH SLIDES injected by JS -->
+  <div id="branchSlides"></div>
+
+  <!-- SLIDE 7: ROADMAP -->
+  <section class="slide" id="slide-7">
+    <div class="slide-inner">
+      <div class="eyebrow">Section 07</div>
+      <h2 class="title">30-day roadmap</h2>
+      <p class="lede">Cross-branch execution order — fast wins first, slow-burn structural work in parallel.</p>
+      <div class="roadmap-week-cards" id="roadmapWeeks"></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: SUCCESS METRICS -->
+  <section class="slide" id="slide-8">
+    <div class="slide-inner">
+      <div class="eyebrow">Section 08</div>
+      <h2 class="title">Success metrics — 30-day check-in</h2>
+      <p class="lede">What "improvement" needs to look like when we re-scan on Day 30.</p>
+      <ul class="metrics-list">
+        <li><i class="ti ti-arrow-right"></i>Jayanagar 12th Commerce: move off rank 40 into a measurable position (even top-20 is a major signal)</li>
+        <li><i class="ti ti-arrow-right"></i>School Tuition category: move from N/A to a ranked position on at least Koramangala and Yelahanka</li>
+        <li><i class="ti ti-arrow-right"></i>CLAT / CMA: either confirmed as non-offerings (drop as targets) or added as services and appearing in scans</li>
+        <li><i class="ti ti-arrow-right"></i>Review velocity: Jayanagar, Yelahanka, Koramangala each show a visible increase in review pace, closing the gap with Malleshwaram</li>
+        <li><i class="ti ti-arrow-right"></i>Call / direction-request volume: reverse the post-May decline across all branches</li>
+        <li><i class="ti ti-arrow-right"></i>Zero further suspensions — confirm individual, non-bulk posting habit is being followed</li>
+      </ul>
+      <div class="callout green" style="margin-top:24px;">
+        <i class="ti ti-check"></i>
+        <div><b>Prepared 7 July 2026</b> — Elite IIT, Bangalore. Google Business Profile &amp; Local SEO Action Plan.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="slide-counter"><b id="slideNum">1</b> / <span id="slideTotal">9</span></div>
+<div class="deck-controls">
+  <div class="ctrl-btn" id="prevBtn"><i class="ti ti-chevron-up"></i></div>
+  <div class="ctrl-btn" id="nextBtn"><i class="ti ti-chevron-down"></i></div>
+</div>
+
+<script>
+// ---------- DATA ----------
+const branches = ["K","Y","J","M"];
+
+const categories = [
+  { name: "School tuitions (1st–10th)", sub: "State/NCERT · CBSE · ICSE · IGCSE", icon: "ti-book-2",
+    rows: [
+      {label:"School tuition (generic)", K:null, Y:null, J:null, M:5},
+      {label:"NCERT school tuition", K:null, Y:null, J:null, M:3},
+      {label:"CBSE school tuition", K:null, Y:null, J:null, M:5},
+      {label:"ICSE school tuition", K:null, Y:null, J:15, M:9},
+      {label:"IGCSE tuition", K:null, Y:null, J:null, M:5},
+    ]
+  },
+  { name: "11th–12th — Science &amp; Commerce", sub: "NEET · CET · IIT | CA · CS · CMA", icon: "ti-flask",
+    rows: [
+      {label:"NEET coaching", K:1, Y:7, J:6, M:1},
+      {label:"CET coaching", K:3, Y:4, J:10, M:1},
+      {label:"IIT coaching", K:1, Y:1, J:4, M:1},
+      {label:"12th Science (general)", K:4, Y:9, J:10, M:2},
+      {label:"CA coaching", K:null, Y:13, J:null, M:null},
+      {label:"CS coaching", K:3, Y:11, J:null, M:7},
+      {label:"CMA coaching", K:null, Y:null, J:null, M:null},
+      {label:"12th Commerce (general)", K:12, Y:8, J:40, M:9},
+    ]
+  },
+  { name: "Navodaya · Sainik · RMS", sub: "Residential school entrance exams", icon: "ti-shield-star",
+    rows: [
+      {label:"Navodaya coaching", K:11, Y:17, J:18, M:3},
+      {label:"Sainik coaching", K:2, Y:3, J:3, M:1},
+      {label:"RMS coaching", K:2, Y:5, J:null, M:3},
+    ]
+  },
+  { name: "IBPS · Banking · SSC · CLAT · KPTCL", sub: "Competitive / govt exam coaching", icon: "ti-building-bank",
+    rows: [
+      {label:"IBPS coaching", K:10, Y:3, J:null, M:5},
+      {label:"Banking coaching", K:16, Y:5, J:23, M:3},
+      {label:"SSC/CGL coaching", K:7, Y:6, J:9, M:4},
+      {label:"CLAT coaching", K:null, Y:null, J:null, M:null},
+      {label:"CUET coaching", K:6, Y:3, J:8, M:1},
+      {label:"KPTCL coaching", K:null, Y:4, J:11, M:null},
+    ]
+  },
+  { name: "General coaching (branch-wise)", sub: "Generic \"coaching in [area]\" search", icon: "ti-map-pin-search",
+    rows: [ {label:"Coaching in [area]", K:8, Y:8, J:16, M:1} ]
+  }
+];
+
+const MAXRANK = 45;
+function rankColorClass(r){ if(r===null) return "na"; if(r<=5) return "good"; if(r<=15) return "mid"; return "bad"; }
+function rankColor(r){ if(r===null) return ""; if(r<=5) return "var(--green)"; if(r<=15) return "var(--amber)"; return "var(--red)"; }
+function rankBarHtml(r){
+  if(r===null) return '<span class="rankpill"><span class="nabar"></span><span class="rankval na">N/A</span></span>';
+  const pct = Math.min(r/MAXRANK,1)*100; const col = rankColor(r); const cls = rankColorClass(r);
+  return `<span class="rankpill"><span class="rankbar"><span class="rankdot" style="left:${pct}%; background:${col};"></span></span><span class="rankval ${cls}">${r}</span></span>`;
+}
+function buildCategoryTable(cat){
+  let thead = '<tr><th>Keyword</th>' + branches.map(b=>`<th class="branch-col">${b}</th>`).join('') + '</tr>';
+  let rows = cat.rows.map(r=>'<tr><td class="kw">'+r.label+'</td>' + branches.map(b=>`<td class="branch-col">${rankBarHtml(r[b])}</td>`).join('') + '</tr>').join('');
+  return `<div class="cat-block"><div class="cat-head"><div class="cat-icon"><i class="ti ${cat.icon}"></i></div><h3>${cat.name}</h3></div>
+  <div class="cat-sub">${cat.sub}</div><table class="rank-table"><thead>${thead}</thead><tbody>${rows}</tbody></table></div>`;
+}
+document.getElementById('overviewTables').innerHTML = categories.map(c=>buildCategoryTable(c)).join('');
+
+// ---------- CALL CHART ----------
+const callData = { Malleshwaram:[289,540,413,401,291], Jayanagar:[287,436,302,315,279], Koramangala:[247,328,300,274,273], Yelahanka:[225,283,328,344,244] };
+const months = ["Feb","Mar","Apr","May","Jun"];
+function buildCallChart(){
+  const maxVal = 560; let html = '<div class="grid-2">';
+  Object.keys(callData).forEach(branch=>{
+    const vals = callData[branch];
+    html += `<div><div style="font-size:12.5px; font-weight:700; margin-bottom:4px; color:var(--text);">${branch}</div><div class="callbars">`;
+    vals.forEach((v,i)=>{ const h = Math.max(4,(v/maxVal)*80);
+      html += `<div class="callbar-col"><div class="callbar-val">${v}</div><div class="callbar" style="height:${h}px;"></div><div class="callbar-lbl">${months[i]}</div></div>`; });
+    html += `</div></div>`;
+  });
+  html += '</div>'; return html;
+}
+document.getElementById('callChart').innerHTML = buildCallChart();
+
+// ---------- DONUT CHART BUILDER ----------
+function buildDonut(segments, size=140){
+  // segments: [{label, value, color}]
+  const total = segments.reduce((s,x)=>s+x.value,0);
+  let cumPct = 0;
+  const stops = segments.map(seg=>{
+    const pct = (seg.value/total)*100;
+    const s = `${seg.color} ${cumPct}% ${cumPct+pct}%`;
+    cumPct += pct;
+    return s;
+  }).join(', ');
+  const legend = segments.map(seg=>`<div class="legend-item"><span class="legend-dot" style="background:${seg.color};"></span><b>${seg.value}</b><span>${seg.label}</span></div>`).join('');
+  return `<div class="donut-row">
+    <div style="width:${size}px; height:${size}px; border-radius:50%; background:conic-gradient(${stops}); position:relative; flex-shrink:0;">
+      <div style="position:absolute; inset:22%; background:var(--bg); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:700; font-size:15px; color:var(--text);">${total}</div>
+    </div>
+    <div class="donut-legend">${legend}</div>
+  </div>`;
+}
+
+// ---------- BRANCH DATA ----------
+const branchData = {
+  jayanagar: { id:"jayanagar", key:"J", name:"Jayanagar", order:"Worst performer · avg rank 13.3", track:"underperform", trackLabel:"Track 1 — Underperforming",
+    diagnosis:"Jayanagar underperforms in every single category — a branch-level GBP health issue, not a keyword-by-keyword problem. The volume of N/A results plus the rank-40 outlier point at missing services/categories and weak citation signal.",
+    donut:[{label:"Top 5", value:2, color:"#3FBE7A"},{label:"Top 6\u201315", value:6, color:"#E8B34E"},{label:"16+", value:2, color:"#F0837C"},{label:"N/A", value:8, color:"#3D2E6B"}],
+    stats:[["ti-trending-down","40","12th Commerce rank"],["ti-file-off","N/A","School tuition, CLAT, CMA"],["ti-star","3.8★","Rating (lowest)"],["ti-phone","279","June calls"]],
+    actions:[
+      ["ti-id-badge-2","GBP name audit","Confirm the listing name matches the real-world legal/signage name exactly; check for keyword-stuffing."],
+      ["ti-category","Category audit","Pull primary + secondary categories of the top 3 competitors for \"coaching centre in Jayanagar\" and align."],
+      ["ti-list-check","Services audit — priority fix","Add missing services: full School Tuition line-up, full Commerce stream (CA/CS/CMA/12th Commerce), RMS, IBPS, CLAT if genuinely offered."],
+      ["ti-map-2","Service areas audit","Confirm all relevant nearby localities are added, prioritized by proximity + population."],
+      ["ti-address-book","NAP citation expansion","Justdial, Sulekha, UrbanPro, Facebook, Instagram — verify exact match on all."],
+      ["ti-message-star","Reviews","Start a daily review-ask habit (WhatsApp link + QR code), targeting Malleshwaram's ~2/day pace."],
+    ],
+    freq:"2–3x / week", freqNote:"Resume immediately, per-branch (not bulk).",
+    postIdeas:["Commerce batch posts naming CA/CS/CMA/12th Commerce directly","Navodaya/RMS exam-prep tips or exam-date reminders","Student result/topper shoutouts tagged with subject + area","School tuition batch announcements (currently zero presence)"],
+    imageIdeas:["Real classroom photos for Commerce and School Tuition batches","Faculty photos with subject specialization captions","Toppers/results board, geo-tagged","Front-desk QR-code-for-reviews signage photo"]
+  },
+  yelahanka: { id:"yelahanka", key:"Y", name:"Yelahanka", order:"Second worst · avg rank 6.4", track:"underperform", trackLabel:"Track 1 — Underperforming",
+    diagnosis:"Yelahanka is the strongest evidence branch for the posting-effect insight — grew while being posted to, dropped once posting stopped. School Tuition is a total blank here too.",
+    donut:[{label:"Top 5", value:4, color:"#3FBE7A"},{label:"Top 6\u201315", value:9, color:"#E8B34E"},{label:"16+", value:2, color:"#F0837C"},{label:"N/A", value:5, color:"#3D2E6B"}],
+    stats:[["ti-trending-down","344→244","May→Jun call drop"],["ti-trophy","1","IIT rank (best)"],["ti-star","4.0★","Rating"],["ti-shield-star","17","Navodaya rank"]],
+    actions:[
+      ["ti-id-badge-2","GBP name audit","Same compliance check as other underperforming branches."],
+      ["ti-category","Category audit","Check whether School Tuition category/services exist at all — likely missing given the total N/A pattern."],
+      ["ti-list-check","Services audit","Add full School Tuition line-up; add CMA if genuinely offered; strengthen Navodaya-specific service entry."],
+      ["ti-map-2","Service areas audit","Confirm coverage of surrounding localities."],
+      ["ti-address-book","NAP citation expansion","Justdial, Sulekha, UrbanPro, Facebook, Instagram — verify and align."],
+      ["ti-message-star","Reviews","No reported velocity data yet — treat as a blank slate, start consistent daily/near-daily collection."],
+    ],
+    freq:"2–3x / week", freqNote:"Highest-confidence branch to prioritize — the posting → calls effect was directly observed here.",
+    postIdeas:["Navodaya exam-prep content specifically (weakest category)","School tuition batch launch posts (currently zero presence)","Leverage Competitive Exams strength — IBPS/Banking/SSC reminders","CA/CS batch or faculty spotlight posts"],
+    imageIdeas:["Photos representing School Tuition and Navodaya batches","Competitive-exam classroom/whiteboard photos","Student testimonial-style images/videos if available"]
+  },
+  koramangala: { id:"koramangala", key:"K", name:"Koramangala", order:"Third · avg rank 6.1", track:"underperform", trackLabel:"Track 1 — Underperforming",
+    diagnosis:"Koramangala has the highest star rating (4.2★) of all branches but only mid-tier ranking. Science stream (NEET/IIT) is excellent; School Tuition is a total blank; Banking/IBPS/KPTCL need work.",
+    donut:[{label:"Top 5", value:5, color:"#3FBE7A"},{label:"Top 6\u201315", value:6, color:"#E8B34E"},{label:"16+", value:1, color:"#F0837C"},{label:"N/A", value:6, color:"#3D2E6B"}],
+    stats:[["ti-star","4.2★","Rating (highest)"],["ti-trophy","1","NEET & IIT rank"],["ti-building-bank","16","Banking rank"],["ti-file-off","N/A","School tuition, KPTCL, CLAT"]],
+    actions:[
+      ["ti-id-badge-2","GBP name audit","Standard compliance check."],
+      ["ti-category","Category audit","Competitor comparison, especially Banking/IBPS/KPTCL where this branch lags relative to its Science strength."],
+      ["ti-list-check","Services audit","Add School Tuition line-up (currently zero); add CA and KPTCL if genuinely offered; strengthen Banking description."],
+      ["ti-map-2","Service areas audit","Confirm coverage of surrounding localities."],
+      ["ti-address-book","NAP citation expansion","Justdial, Sulekha, UrbanPro, Facebook, Instagram."],
+      ["ti-message-star","Reviews","Despite the highest rating of all branches, velocity appears low — start a consistent collection habit."],
+    ],
+    freq:"2–3x / week", freqNote:"Resume individually, not bulk.",
+    postIdeas:["Leverage Science-stream strength — NEET/IIT success stories, batch results","Banking/IBPS/KPTCL batch announcements — clear gap vs Science performance","School Tuition launch content (currently zero presence)"],
+    imageIdeas:["IIT/NEET classroom and result-day photos (strongest category)","Banking/competitive-exam batch photos","Front-desk review QR code signage"]
+  },
+  malleshwaram: { id:"malleshwaram", key:"M", name:"Malleshwaram", order:"Best performer · avg rank 3.5", track:"perform", trackLabel:"Track 2 — Maintenance",
+    diagnosis:"The flagship branch — ranks 1–5 on almost everything, including the high-value generic city-wide search. Lowest star rating (3.9★) but best rank, on the back of consistent review velocity.",
+    donut:[{label:"Top 5", value:13, color:"#3FBE7A"},{label:"Top 6\u201315", value:4, color:"#E8B34E"},{label:"16+", value:0, color:"#F0837C"},{label:"N/A", value:3, color:"#3D2E6B"}],
+    stats:[["ti-trophy","2","\"Coaching centre in Bangalore\" rank"],["ti-star","3.9★","Rating (lowest, but best rank)"],["ti-message-star","~2/day","Review pace"],["ti-phone","291","June calls, despite suspension"]],
+    actions:[
+      ["ti-lock","GBP name/category audit","Light check only — no unnecessary edits given this listing was recently suspended once."],
+      ["ti-list-check","Services audit — top-up only","CA, CMA, and KPTCL are the remaining soft/missing spots."],
+      ["ti-address-book","NAP citation expansion","Verify existing citations post-reinstatement; add UrbanPro/Instagram if missing."],
+      ["ti-message-star","Reviews","Sustain the existing ~2/day pace — the working habit responsible for this branch's performance."],
+    ],
+    freq:"2x / week", freqNote:"Maintain a steady, moderate cadence — avoid bulk-publish given the suspension history.",
+    postIdeas:["CA/CMA-specific content to close the one real gap in an otherwise strong profile","Continue showcasing results/toppers across Science and Navodaya/Sainik streams"],
+    imageIdeas:["Periodic refresh of classroom/faculty photos","Results/achievement photos tied to dominant categories (Science, Navodaya, Sainik)"]
+  }
+};
+
+function buildTierLists(branchKey){
+  let na=[], low=[], good=[];
+  categories.forEach(cat=>{
+    cat.rows.forEach(r=>{
+      const val = r[branchKey];
+      const entry = {label:r.label, val};
+      if(val===null) na.push(entry);
+      else if(val<=5) good.push(entry);
+      else low.push(entry);
+    });
+  });
+  low.sort((a,b)=>a.val-b.val);
+  good.sort((a,b)=>a.val-b.val);
+  return {na, low, good};
+}
+
+function tierListHtml(arr, showRank){
+  if(arr.length===0) return `<div style="font-size:12.5px; color:var(--text-dim); font-style:italic; padding:6px 0;">None</div>`;
+  return `<ul style="list-style:none;">` + arr.map(e=>
+    showRank
+      ? `<li style="padding:7px 0; font-size:12.5px; color:var(--text); border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; gap:8px;"><span>${e.label}</span>${rankBarHtml(e.val)}</li>`
+      : `<li style="padding:7px 0; font-size:12.5px; color:var(--text-dim); border-bottom:1px solid var(--border);">${e.label}</li>`
+  ).join('') + `</ul>`;
+}
+
+function buildTierSectionHtml(branchKey){
+  const {na, low, good} = buildTierLists(branchKey);
+  return `
+  <div class="subhead" style="margin-top:32px;"><i class="ti ti-sort-descending-2"></i>Keywords by performance tier</div>
+  <div class="grid-3">
+    <div class="card-outline">
+      <h3 style="font-size:14px;"><i class="ti ti-file-off"></i>Not ranking (N/A) — ${na.length}</h3>
+      ${tierListHtml(na, false)}
+    </div>
+    <div class="card-outline">
+      <h3 style="font-size:14px; color:var(--amber);"><i class="ti ti-trending-down"></i>Low ranking (6+) — ${low.length}</h3>
+      ${tierListHtml(low, true)}
+    </div>
+    <div class="card-outline">
+      <h3 style="font-size:14px; color:var(--green);"><i class="ti ti-trending-up"></i>Well performing (top 5) — ${good.length}</h3>
+      ${tierListHtml(good, true)}
+    </div>
+  </div>`;
+}
+
+function buildBranchRankTables(branchKey){
+  return categories.map(c=>{
+    let rows = c.rows.map(r=>`<tr><td class="kw">${r.label}</td><td class="branch-col">${rankBarHtml(r[branchKey])}</td></tr>`).join('');
+    return `<table class="rank-table" style="margin-bottom:14px;"><tbody>${rows}</tbody></table>`;
+  }).join('');
+}
+
+function buildBranchSlide(b, slideIndex){
+  const trackClass = b.track === "underperform" ? "underperform" : "perform";
+  const trackIcon = b.track === "underperform" ? "ti-trending-down" : "ti-trending-up";
+  const statsHtml = b.stats.map(s=>`<div class="stat-block"><div class="big" style="font-size:26px;">${s[1]}</div><div class="lbl" style="font-size:11.5px;">${s[2]}</div></div>`).join('');
+  const actionsHtml = b.actions.map(a=>`<li><div class="action-icon"><i class="ti ${a[0]}"></i></div><div><b>${a[1]}</b><span>${a[2]}</span></div></li>`).join('');
+  const postIdeasHtml = b.postIdeas.map(p=>`<li>${p}</li>`).join('');
+  const imageIdeasHtml = b.imageIdeas.map(p=>`<li>${p}</li>`).join('');
+  const rankTables = buildBranchRankTables(b.key);
+  const donutHtml = buildDonut(b.donut, 130);
+
+  return `
+  <section class="slide" id="slide-${slideIndex}">
+    <div class="slide-inner">
+      <div class="eyebrow">Section 0${slideIndex+1}-${slideIndex+2}</div>
+      <div class="branch-header">
+        <div class="branch-badge"><i class="ti ti-map-pin"></i></div>
+        <h2 class="title" style="margin-bottom:0;">${b.name}</h2>
+        <span class="rank-order-badge">${b.order}</span>
+      </div>
+      <span class="track-badge ${trackClass}"><i class="ti ${trackIcon}"></i>${b.trackLabel}</span>
+      <p class="lede" style="margin-top:4px;">${b.diagnosis}</p>
+
+      <div class="stat-trio">${statsHtml}</div>
+
+      <div class="grid-2" style="align-items:start; margin-bottom:10px;">
+        <div class="card-outline">
+          <h3 style="font-size:15px;"><i class="ti ti-chart-donut"></i>Keyword rank distribution</h3>
+          ${donutHtml}
+        </div>
+        <div class="card-outline">
+          <h3 style="font-size:15px;"><i class="ti ti-calendar-event"></i>Posting frequency</h3>
+          <div class="freq-box" style="margin-top:0;"><span class="freq-tag">${b.freq}</span><p>${b.freqNote}</p></div>
+          <div class="idea-grid" style="margin-top:14px; grid-template-columns:1fr;">
+            <div class="idea-card"><h5><i class="ti ti-message-2"></i>Post ideas</h5><ul>${postIdeasHtml}</ul></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="align-items:start;">
+        <div>
+          <div class="subhead"><i class="ti ti-list-numbers"></i>Rankings — this branch</div>
+          ${rankTables}
+        </div>
+        <div>
+          <div class="subhead"><i class="ti ti-checklist"></i>Action plan</div>
+          <ul class="action-list">${actionsHtml}</ul>
+          <div class="idea-card" style="margin-top:14px;"><h5><i class="ti ti-camera"></i>Image ideas</h5><ul>${imageIdeasHtml}</ul></div>
+        </div>
+      </div>
+
+      ${buildTierSectionHtml(b.key)}
+    </div>
+  </section>`;
+}
+
+const branchOrder = ["jayanagar","yelahanka","koramangala","malleshwaram"];
+document.getElementById('branchSlides').innerHTML = branchOrder.map((id,i)=>buildBranchSlide(branchData[id], i+3)).join('');
+
+// ---------- ROADMAP ----------
+const roadmapWeeks = [
+  ["1","Immediate + audit","Resume posting on all 4 branches individually (not bulk). Run GBP Name/Category/Services/Service Area audits on Jayanagar, Yelahanka, Koramangala. Light audit only on Malleshwaram. Confirm CLAT/CMA with the decision-maker."],
+  ["2","Fix &amp; build","Add missing services (School Tuition, Commerce gaps, Navodaya on Yelahanka). Begin NAP citation creation/correction across Justdial, Sulekha, UrbanPro, Facebook, Instagram. Start daily review-ask habit on the 3 underperforming branches."],
+  ["3","Sustain &amp; push","Continue posting cadence — 2–3x/week Track 1, 2x/week Malleshwaram. Continue review push. Follow up on citation indexing via Search Console."],
+  ["4","Re-scan &amp; report","Re-run the Grid Map/rank scan on all branches, all keywords, using the 7 July baseline methodology. Re-pull call volume. Compare and adjust priorities."]
+];
+document.getElementById('roadmapWeeks').innerHTML = roadmapWeeks.map(w=>`
+  <div class="week-card"><div class="wk-badge">${w[0]}</div><h4>${w[1]}</h4><p>${w[2]}</p></div>`).join('');
+
+// ---------- SLIDE NAVIGATION ----------
+const deck = document.getElementById('deck');
+const slideIds = ["slide-0","slide-1","slide-2","slide-3","slide-4","slide-5","slide-6","slide-7","slide-8"];
+const slideEls = slideIds.map(id=>document.getElementById(id));
+document.getElementById('slideTotal').textContent = slideEls.length;
+let currentSlide = 0;
+
+function goToSlide(i){
+  if(i<0) i=0; if(i>=slideEls.length) i=slideEls.length-1;
+  slideEls[i].scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link=>{
+  link.addEventListener('click', ()=> goToSlide(parseInt(link.dataset.slide,10)));
+});
+document.getElementById('prevBtn').addEventListener('click', ()=> goToSlide(currentSlide-1));
+document.getElementById('nextBtn').addEventListener('click', ()=> goToSlide(currentSlide+1));
+document.addEventListener('keydown', (e)=>{
+  if(e.key==='ArrowDown'||e.key==='ArrowRight') { e.preventDefault(); goToSlide(currentSlide+1); }
+  if(e.key==='ArrowUp'||e.key==='ArrowLeft') { e.preventDefault(); goToSlide(currentSlide-1); }
+});
+
+const slideObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting && entry.intersectionRatio > 0.5){
+      const idx = slideEls.indexOf(entry.target);
+      if(idx>=0){
+        currentSlide = idx;
+        document.getElementById('slideNum').textContent = idx+1;
+        navLinks.forEach(l=>l.classList.remove('active'));
+        const active = document.querySelector(`.nav-link[data-slide="${idx}"]`);
+        if(active) active.classList.add('active');
+      }
+    }
+  });
+}, {root:null, rootMargin:"-40% 0px -55% 0px", threshold:0});
+slideEls.forEach(el=>slideObserver.observe(el));
+
+// init
+navLinks[0].classList.add('active');
+</script>
+</body>
+</html>
